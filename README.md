@@ -3,7 +3,7 @@
 
 Este proyecto consta de dos capas principales:
   - Una capa, llamad **stream layer**, en la cual, recibimos datos de señales de móvilesa enviadas través de un docker instalado en una instancia de *Kafka*. Esta capa, realiza un prcesamiento en streaming en la cual, en ventanas de 5 minutos, se va recogiendo los datos, enriqueciéndolos con metadatos de una tabla quetenemos creada en *PostgreSQL* en *Google CLoud* llamada **user_metadata**:
-  - ![alt text][https://github.com/mresquivias/KeepCoding/blob/big-data-processing/user_metadata.png?raw=true]
+  - ![alt text][/mresquivias/KeepCoding/blob/big-data-processing/user_metadata.png?raw=true]
 
   - Estos datos enriquecidos, tras una serie de operaciones se añaden a *PostgreSQL* en una nuueva tabla llamada **bytes**, en la cual tenemos los datos agrupados por id, id de antena y aplicación:
   - https://github.com/mresquivias/KeepCoding/blob/big-data-processing/bytes.png?raw=true

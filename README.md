@@ -1,5 +1,5 @@
 # KeepCoding
-€€ Big Data Processing
+## Big Data Processing
 
 Este proyecto consta de dos capas principales:
   - Una capa, llamad **stream layer**, en la cual, recibimos datos de señales de móvilesa enviadas través de un docker instalado en una instancia de *Kafka*. Esta capa, realiza un prcesamiento en streaming en la cual, en ventanas de 5 minutos, se va recogiendo los datos, enriqueciéndolos con metadatos de una tabla quetenemos creada en *PostgreSQL* en *Google CLoud* llamada **user_metadata**:

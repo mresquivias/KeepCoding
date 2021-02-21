@@ -1,4 +1,5 @@
 # KeepCoding
+€€ Big Data Processing
 
 Este proyecto consta de dos capas principales:
   - Una capa, llamad **stream layer**, en la cual, recibimos datos de señales de móvilesa enviadas través de un docker instalado en una instancia de *Kafka*. Esta capa, realiza un prcesamiento en streaming en la cual, en ventanas de 5 minutos, se va recogiendo los datos, enriqueciéndolos con metadatos de una tabla quetenemos creada en *PostgreSQL* en *Google CLoud* llamada **user_metadata**:
@@ -16,3 +17,6 @@ Este proyecto consta de dos capas principales:
 
   - A su vez, también calcula, aprovechando los metadatos, si los usuarios se han pasado de su cuota de datos, y lo almacena en una nueva tabla en PostgresSQL llamada **user_quota_limit**
   - https://github.com/mresquivias/KeepCoding/blob/big-data-processing/user_quota_limit.png?raw=true
+
+  - Por último añdimos una nuca capa llamada **serving layer**, en la cual, aprovechando la instancia que ya teníamos creada, montamos otro docker con *Superset* que nos sirve para conectarnos a la basse de datos de *PostgreSQL* y, desde ahí, crear visualizaciones de datos.
+  - https://github.com/mresquivias/KeepCoding/blob/big-data-processing/Dashboard.jpg?raw=true
